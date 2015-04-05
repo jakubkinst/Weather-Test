@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="units_length">
+		<item>Meters</item>
+		<item>Feet</item>
+	</string-array>
+
+	<string-array name="units_metric_imperial">
+		<item>@string/pref_value_unit_metric</item>
+		<item>@string/pref_value_unit_imperial</item>
+	</string-array>
+
+	<string-array name="units_temperature">
+		<item>Celsius</item>
+		<item>Fahrenheit</item>
+	</string-array>
+</resources>

@@ -1,0 +1,192 @@
+<android.support.v4.widget.SwipeRefreshLayout
+	android:id="@+id/swipe_refresh"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				tools:context="cz.kinst.jakub.weather.android.fragment.TodayFragment">
+
+
+				<ImageView
+					android:id="@+id/current_image"
+					android:layout_width="@dimen/today_weather_icon_size"
+					android:layout_height="@dimen/today_weather_icon_size"
+					android:layout_gravity="center_horizontal"
+					android:layout_margin="@dimen/global_spacing_m"
+					android:background="@drawable/background_weather_icon"
+					android:padding="@dimen/global_spacing_xxs"
+					tools:src="@drawable/ic_weather_precipitation"/>
+
+				<TextView
+					android:id="@+id/location"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:fontFamily="sans-serif-light"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="@color/global_text_default"
+					android:textSize="@dimen/global_text_size_subhead"
+					tools:text="Prague, Czech Republic"/>
+
+				<TextView
+					android:id="@+id/current_condition"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="@color/global_text_default"
+					android:textSize="@dimen/global_text_size_display_1"
+					android:textStyle="bold"
+					tools:text="25°C | Sunny"/>
+
+				<View
+					android:layout_width="@dimen/today_separator_width"
+					android:layout_height="@dimen/global_separator_thickness"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginBottom="@dimen/global_spacing_xs"
+					android:layout_marginTop="@dimen/global_spacing_xs"
+					android:background="@color/global_separator"></View>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="@dimen/global_icon_size_default"
+							android:layout_height="@dimen/global_icon_size_default"
+							android:layout_gravity="center"
+							android:src="@drawable/ic_weather_humidity"/>
+
+						<TextView
+							android:id="@+id/humidity"
+							style="@style/WeatherParameter"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							tools:text="57%"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="@dimen/global_icon_size_default"
+							android:layout_height="@dimen/global_icon_size_default"
+							android:layout_gravity="center"
+							android:src="@drawable/ic_weather_precipitation"/>
+
+						<TextView
+							android:id="@+id/precipitation"
+							style="@style/WeatherParameter"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							tools:text="0.0 mm"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="@dimen/global_icon_size_default"
+							android:layout_height="@dimen/global_icon_size_default"
+							android:layout_gravity="center"
+							android:src="@drawable/ic_weather_pressure"/>
+
+						<TextView
+							android:id="@+id/pressure"
+							style="@style/WeatherParameter"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							tools:text="1019 hPa"/>
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/global_spacing_m">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="@dimen/global_icon_size_default"
+							android:layout_height="@dimen/global_icon_size_default"
+							android:layout_gravity="center"
+							android:src="@drawable/ic_weather_wind_speed"/>
+
+						<TextView
+							android:id="@+id/wind_speed"
+							style="@style/WeatherParameter"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							tools:text="20 km/h"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="@dimen/global_icon_size_default"
+							android:layout_height="@dimen/global_icon_size_default"
+							android:layout_gravity="center"
+							android:src="@drawable/ic_weather_direction"/>
+
+						<TextView
+							android:id="@+id/wind_direction"
+							style="@style/WeatherParameter"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							tools:text="57%"/>
+					</LinearLayout>
+				</LinearLayout>
+
+			</LinearLayout>
+		</ScrollView>
+
+		<include
+			android:id="@+id/error"
+			layout="@layout/overlay_error"
+			android:visibility="gone"/>
+
+		<include
+			android:id="@+id/loading"
+			layout="@layout/overlay_loading"
+			android:visibility="gone"/>
+	</FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

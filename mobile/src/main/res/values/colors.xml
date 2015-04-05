@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="global_primary">#7FA5E3</color>
+	<color name="global_primary_dark">#6684B6</color>
+	<color name="global_white">#FFFFFF</color>
+	<color name="global_separator">#e5e5e5</color>
+	<color name="global_text_default">#333333</color>
+</resources>

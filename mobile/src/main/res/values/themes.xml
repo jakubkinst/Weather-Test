@@ -1,0 +1,10 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="Theme.Weather" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="colorPrimary">@color/global_primary</item>
+		<item name="colorPrimaryDark">@color/global_primary_dark</item>
+		<item name="colorAccent">@color/global_primary</item>
+	</style>
+
+</resources>

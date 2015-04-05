@@ -1,0 +1,18 @@
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="@dimen/global_spacing_xxs"
+	android:paddingLeft="@dimen/global_spacing_xxs"
+	android:paddingRight="@dimen/global_spacing_xxs"
+	android:paddingTop="@dimen/global_spacing_xxs"
+	tools:context="cz.kinst.jakub.weather.android.activity.SettingsActivity">
+
+	<fragment
+		android:id="@+id/fragment"
+		android:name="cz.kinst.jakub.weather.android.fragment.SettingsFragment"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+</FrameLayout>

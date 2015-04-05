@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="@dimen/global_navigation_item_height"
+			  android:orientation="horizontal"
+			  android:paddingLeft="@dimen/global_spacing_xs"
+			  android:paddingRight="@dimen/global_spacing_xs">
+
+	<ImageView
+		android:id="@+id/navigation_icon"
+		android:layout_width="@dimen/global_icon_size_default"
+		android:layout_height="@dimen/global_icon_size_default"
+		android:layout_gravity="center_vertical"
+		tools:src="@drawable/ic_drawer_forecast_dark"/>
+
+	<TextView
+		android:id="@+id/navigation_title"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="@dimen/global_spacing_m"
+		android:layout_weight="1"
+		android:textColor="@color/item_navigation"
+		android:textSize="@dimen/global_text_size_menu"
+		android:textStyle="bold"
+		tools:text="Today"/>
+
+</LinearLayout>
