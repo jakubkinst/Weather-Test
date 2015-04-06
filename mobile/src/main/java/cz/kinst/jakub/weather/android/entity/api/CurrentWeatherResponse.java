@@ -1,11 +1,11 @@
-package cz.kinst.jakub.weather.android.entity;
+package cz.kinst.jakub.weather.android.entity.api;
 
 import java.util.List;
 
 /**
  * Created by jakubkinst on 04/04/15.
  */
-public class WeatherResponse {
+public class CurrentWeatherResponse extends WeatherResponse {
 	Wind wind;
 	WeatherMain main;
 	List<WeatherInfo> weather;

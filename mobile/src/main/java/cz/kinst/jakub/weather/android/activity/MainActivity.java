@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 
 import cz.kinst.jakub.weather.android.R;
+import cz.kinst.jakub.weather.android.fragment.ForecastFragment;
 import cz.kinst.jakub.weather.android.fragment.NavigationDrawerFragment;
 import cz.kinst.jakub.weather.android.fragment.TodayFragment;
 
@@ -49,11 +50,11 @@ public class MainActivity extends ActionBarActivity
 		fragment = fragmentManager.findFragmentByTag(String.valueOf(position));
 		if (fragment == null) {
 			switch (position) {
-				case 0:
+				case NavigationDrawerFragment.NAV_POSITION_TODAY:
 					fragment = TodayFragment.newInstance();
 					break;
-				case 1:
-					fragment = TodayFragment.newInstance();
+				case NavigationDrawerFragment.NAV_POSITION_FORECAST:
+					fragment = ForecastFragment.newInstance();
 					break;
 			}
 		}
@@ -66,10 +67,10 @@ public class MainActivity extends ActionBarActivity
 
 	public void onSectionAttached(int number) {
 		switch (number) {
-			case 0:
+			case NavigationDrawerFragment.NAV_POSITION_TODAY:
 				mTitle = getString(R.string.title_today);
 				break;
-			case 1:
+			case NavigationDrawerFragment.NAV_POSITION_FORECAST:
 				mTitle = getString(R.string.title_forecast);
 				break;
 		}

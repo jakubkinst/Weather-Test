@@ -1,6 +1,7 @@
 package cz.kinst.jakub.weather.android.api;
 
-import cz.kinst.jakub.weather.android.entity.WeatherResponse;
+import cz.kinst.jakub.weather.android.entity.api.CurrentWeatherResponse;
+import cz.kinst.jakub.weather.android.entity.api.ForecastWeatherResponse;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.http.GET;
@@ -24,6 +25,10 @@ public class OpenWeatherMapApi {
 
 	public interface ApiInterface {
 		@GET("/weather?units=metric")
-		void getWeather(@Query("lat") double lat, @Query("lon") double lon, Callback<WeatherResponse> callback);
+		void getCurrentWeather(@Query("lat") double lat, @Query("lon") double lon, Callback<CurrentWeatherResponse> callback);
+
+		@GET("/forecast/daily?units=metric")
+		void getForecast(@Query("lat") double lat, @Query("lon") double lon, Callback<ForecastWeatherResponse> callback);
+
 	}
 }

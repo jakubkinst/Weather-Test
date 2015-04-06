@@ -14,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -26,11 +25,13 @@ import cz.kinst.jakub.weather.android.adapter.NavigationAdapter;
 
 public class NavigationDrawerFragment extends Fragment {
 
+	public static final int NAV_POSITION_TODAY = 0;
+	public static final int NAV_POSITION_FORECAST = 1;
 	private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
 	@InjectView(R.id.navigation_list)
 	ListView mNavigationList;
-	private NavigationDrawerCallbacks mCallbacks;
 
+	private NavigationDrawerCallbacks mCallbacks;
 	private ActionBarDrawerToggle mDrawerToggle;
 
 	private DrawerLayout mDrawerLayout;
@@ -60,12 +61,7 @@ public class NavigationDrawerFragment extends Fragment {
 		View view = inflater.inflate(
 				R.layout.fragment_navigation_drawer, container, false);
 		ButterKnife.inject(this, view);
-		mNavigationList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				selectItem(position);
-			}
-		});
+		mNavigationList.setOnItemClickListener((parent, view1, position, id) -> selectItem(position));
 
 		ArrayList<NavigationAdapter.NavigationItem> navItems = new ArrayList<>();
 		navItems.add(new NavigationAdapter.NavigationItem(getString(R.string.title_today), R.drawable.ic_drawer_today_dark));
@@ -122,12 +118,7 @@ public class NavigationDrawerFragment extends Fragment {
 			}
 		};
 
-		mDrawerLayout.post(new Runnable() {
-			@Override
-			public void run() {
-				mDrawerToggle.syncState();
-			}
-		});
+		mDrawerLayout.post(() -> mDrawerToggle.syncState());
 
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
@@ -193,7 +184,7 @@ public class NavigationDrawerFragment extends Fragment {
 	}
 
 
-	public static interface NavigationDrawerCallbacks {
+	public interface NavigationDrawerCallbacks {
 		void onNavigationDrawerItemSelected(int position);
 	}
 

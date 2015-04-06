@@ -181,12 +181,12 @@
 
 		<include
 			android:id="@+id/error"
-			layout="@layout/overlay_error"
+			layout="@layout/include_overlay_error"
 			android:visibility="gone"/>
 
 		<include
 			android:id="@+id/loading"
-			layout="@layout/overlay_loading"
+			layout="@layout/include_overlay_loading"
 			android:visibility="gone"/>
 	</FrameLayout>
 </android.support.v4.widget.SwipeRefreshLayout>

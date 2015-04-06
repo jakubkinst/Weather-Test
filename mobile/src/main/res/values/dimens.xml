@@ -35,4 +35,7 @@
 
 	<dimen name="today_weather_icon_size">96dp</dimen>
 	<dimen name="today_separator_width">100dp</dimen>
+	<dimen name="forecast_item_icon_size">56dp</dimen>
+	<dimen name="forecast_text_size_temperature">28sp</dimen>
+	<dimen name="forecast_text_size_day_name">32sp</dimen>
 </resources>

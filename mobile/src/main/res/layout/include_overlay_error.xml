@@ -24,7 +24,7 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
 			android:text="@string/error_oops"
-			android:textSize="10sp"
+			android:textSize="@dimen/global_text_size_caption"
 			/>
 	</LinearLayout>
 

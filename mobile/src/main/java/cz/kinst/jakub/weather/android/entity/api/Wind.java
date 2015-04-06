@@ -1,4 +1,4 @@
-package cz.kinst.jakub.weather.android.entity;
+package cz.kinst.jakub.weather.android.entity.api;
 
 import cz.kinst.jakub.weather.android.utility.WeatherUtility;
 
