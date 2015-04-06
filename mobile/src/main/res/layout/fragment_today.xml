@@ -131,6 +131,8 @@
 				<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/global_spacing_l"
+					android:layout_marginRight="@dimen/global_spacing_l"
 					android:layout_marginTop="@dimen/global_spacing_m">
 
 					<LinearLayout
