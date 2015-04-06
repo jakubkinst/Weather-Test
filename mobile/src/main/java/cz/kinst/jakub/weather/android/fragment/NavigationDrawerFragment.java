@@ -38,11 +38,6 @@ public class NavigationDrawerFragment extends Fragment {
 	private View mFragmentContainerView;
 	private int mCurrentSelectedPosition = 0;
 
-
-	public NavigationDrawerFragment() {
-	}
-
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -77,7 +72,6 @@ public class NavigationDrawerFragment extends Fragment {
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		setHasOptionsMenu(true);
-		setRetainInstance(true);
 	}
 
 

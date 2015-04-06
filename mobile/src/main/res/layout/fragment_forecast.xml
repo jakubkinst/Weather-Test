@@ -13,15 +13,15 @@
 			android:id="@+id/list_forecast"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"></ListView>
-
-		<include
-			android:id="@+id/error"
-			layout="@layout/include_overlay_error"
-			android:visibility="gone"/>
-
-		<include
-			android:id="@+id/loading"
-			layout="@layout/include_overlay_loading"
-			android:visibility="gone"/>
 	</android.support.v4.widget.SwipeRefreshLayout>
+
+	<include
+		android:id="@+id/error"
+		layout="@layout/include_overlay_error"
+		android:visibility="gone"/>
+
+	<include
+		android:id="@+id/loading"
+		layout="@layout/include_overlay_loading"
+		android:visibility="gone"/>
 </FrameLayout>

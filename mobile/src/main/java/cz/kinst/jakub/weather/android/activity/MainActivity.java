@@ -34,7 +34,6 @@ public class MainActivity extends ActionBarActivity
 
 		mNavigationDrawerFragment = (NavigationDrawerFragment)
 				getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-		mTitle = getTitle();
 
 		// Set up the drawer.
 		mNavigationDrawerFragment.setUp(
@@ -46,7 +45,7 @@ public class MainActivity extends ActionBarActivity
 	@Override
 	public void onNavigationDrawerItemSelected(int position) {
 		FragmentManager fragmentManager = getSupportFragmentManager();
-		Fragment fragment = null;
+		Fragment fragment;
 		fragment = fragmentManager.findFragmentByTag(String.valueOf(position));
 		if (fragment == null) {
 			switch (position) {
@@ -80,7 +79,6 @@ public class MainActivity extends ActionBarActivity
 
 	public void restoreActionBar() {
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
 		actionBar.setDisplayShowTitleEnabled(true);
 		actionBar.setTitle(mTitle);
 	}
