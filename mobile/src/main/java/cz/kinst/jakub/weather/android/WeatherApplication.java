@@ -2,6 +2,9 @@ package cz.kinst.jakub.weather.android;
 
 import android.app.Application;
 
+import com.orhanobut.logger.LogLevel;
+import com.orhanobut.logger.Logger;
+
 import cz.kinst.jakub.weather.android.utility.Preferences;
 
 /**
@@ -20,5 +23,8 @@ public class WeatherApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		sPreferences = new Preferences(this);
+		Logger.init(WeatherConfig.LOG_TAG)
+				.setMethodCount(3)
+				.setLogLevel(BuildConfig.LOGS ? LogLevel.FULL : LogLevel.NONE);
 	}
 }

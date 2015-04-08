@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
 
 import butterknife.ButterKnife;
@@ -61,13 +62,14 @@ public class TodayFragment extends BaseWeatherFragment {
 		OpenWeatherMapApi.getApi().getCurrentWeather(location.getLatitude(), location.getLongitude(), new Callback<CurrentWeatherResponse>() {
 			@Override
 			public void success(CurrentWeatherResponse weatherResponse, Response response) {
+				Logger.d("Current weather response received");
 				onLoadSuccess(weatherResponse);
 			}
 
 
 			@Override
 			public void failure(RetrofitError error) {
-				error.printStackTrace();
+				Logger.e(error);
 				onLoadFailed();
 			}
 		});

@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.orhanobut.logger.Logger;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import cz.kinst.jakub.weather.android.R;
@@ -46,13 +48,14 @@ public class ForecastFragment extends BaseWeatherFragment {
 		OpenWeatherMapApi.getApi().getForecast(location.getLatitude(), location.getLongitude(), new Callback<ForecastWeatherResponse>() {
 			@Override
 			public void success(ForecastWeatherResponse forecastResponse, Response response) {
+				Logger.d("Forecast response received");
 				onLoadSuccess(forecastResponse);
 			}
 
 
 			@Override
 			public void failure(RetrofitError error) {
-				error.printStackTrace();
+				Logger.e(error);
 				onLoadFailed();
 			}
 		});

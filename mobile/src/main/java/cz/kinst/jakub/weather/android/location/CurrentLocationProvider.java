@@ -38,7 +38,6 @@ public class CurrentLocationProvider implements GoogleApiClient.ConnectionCallba
 		Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(
 				mGoogleApiClient);
 		mListener.onLastLocationReceived(lastLocation);
-
 	}
 
 
