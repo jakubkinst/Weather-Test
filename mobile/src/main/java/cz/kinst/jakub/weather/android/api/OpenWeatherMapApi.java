@@ -1,5 +1,6 @@
 package cz.kinst.jakub.weather.android.api;
 
+import cz.kinst.jakub.weather.android.WeatherConfig;
 import cz.kinst.jakub.weather.android.entity.api.CurrentWeatherResponse;
 import cz.kinst.jakub.weather.android.entity.api.ForecastWeatherResponse;
 import retrofit.Callback;
@@ -17,7 +18,7 @@ public class OpenWeatherMapApi {
 	public static ApiInterface getApi() {
 		if (sInstance == null)
 			sInstance = new RestAdapter.Builder()
-					.setEndpoint("http://api.openweathermap.org/data/2.5")
+					.setEndpoint(WeatherConfig.API_OPENWEATHERMAP_ROOT)
 					.build().create(ApiInterface.class);
 		return sInstance;
 	}
