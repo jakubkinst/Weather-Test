@@ -2,16 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 	<ListPreference
 		android:defaultValue="metric"
-		android:entries="@array/units_length"
-		android:entryValues="@array/units_metric_imperial"
+		android:entries="@array/pref_entries_unit_length"
+		android:entryValues="@array/pref_values_unit_metric_imperial"
 		android:key="@string/pref_key_unit_length"
 		android:summary="%s"
-		android:title="@string/pref_unit_length"></ListPreference>
+		android:title="@string/pref_title_unit_length"></ListPreference>
 	<ListPreference
 		android:defaultValue="metric"
-		android:entries="@array/units_temperature"
-		android:entryValues="@array/units_metric_imperial"
+		android:entries="@array/pref_entries_unit_temperature"
+		android:entryValues="@array/pref_values_unit_metric_imperial"
 		android:key="@string/pref_key_unit_temperature"
 		android:summary="%s"
-		android:title="@string/pref_unit_temperature"></ListPreference>
+		android:title="@string/pref_title_unit_temperature"></ListPreference>
 </PreferenceScreen>
