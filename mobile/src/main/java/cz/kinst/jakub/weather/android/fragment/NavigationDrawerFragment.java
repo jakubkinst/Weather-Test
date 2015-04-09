@@ -38,6 +38,7 @@ public class NavigationDrawerFragment extends Fragment {
 	private View mFragmentContainerView;
 	private int mCurrentSelectedPosition = 0;
 
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

@@ -6,6 +6,7 @@ import android.preference.PreferenceManager;
 
 import cz.kinst.jakub.weather.android.R;
 
+
 /**
  * Created by jakubkinst on 05/04/15.
  */

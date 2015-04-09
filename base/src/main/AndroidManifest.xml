@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	package="com.example.base">
+
+	<!-- versionCode, versionName, minSdkVersion, targetSdkVersion properties are set via Gradle script -->
+
+	<application>
+	</application>
+</manifest>

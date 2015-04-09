@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+
+final VERSION_MAJOR = 1 // max two digits
+final VERSION_MINOR = 0 // max two digits
+final VERSION_PATCH = 0 // max two digits
+final VERSION_BUILD = 0 // max three digits
+
+
+dependencies
+		{
+			compile project(':base')
+			compile fileTree(dir: 'libs', include: ['*.jar'])
+			compile 'com.google.android.support:wearable:1.0.+'
+		}
+
+
+android {
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+
+	compileSdkVersion 22
+	buildToolsVersion "22.0.0"
+
+	defaultConfig {
+		applicationId "cz.kinst.jakub.weather.android"
+		minSdkVersion 20
+		targetSdkVersion 22
+		versionCode VERSION_MAJOR * 10000000 + VERSION_MINOR * 100000 + VERSION_PATCH * 1000 + VERSION_BUILD
+		versionName "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}"
+	}
+
+	buildTypes {
+		debug {
+			buildConfigField "boolean", "LOGS", "true"
+			buildConfigField "boolean", "DEV_API", "true"
+
+			versionNameSuffix "-debug"
+		}
+
+		release {
+			buildConfigField "boolean", "LOGS", "false"
+			buildConfigField "boolean", "DEV_API", "false"
+
+			zipAlignEnabled true
+			minifyEnabled false
+			shrinkResources false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+

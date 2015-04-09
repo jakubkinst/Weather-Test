@@ -18,6 +18,7 @@
 
 	<string name="pref_title_unit_length">Unit of length</string>
 	<string name="pref_title_unit_temperature">Unit of temperature</string>
+	<string name="event_get_weather">/getWeather</string>
 
 	<string-array name="pref_entries_unit_length">
 		<item>Meters</item>

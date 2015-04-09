@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			 xmlns:tools="http://schemas.android.com/tools"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:background="@color/today_wear_background"
+			 android:orientation="vertical"
+			 tools:context="cz.kinst.jakub.weather.android.TodayActivity"
+			 tools:deviceIds="wear_square">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/today_wear_color_overlay_height"
+		android:background="@color/global_primary">
+
+		<ImageView
+			android:id="@+id/icon"
+			android:layout_width="@dimen/today_wear_icon_size"
+			android:layout_height="@dimen/today_wear_icon_size"
+			android:layout_gravity="center_horizontal|bottom"
+			android:layout_marginBottom="@dimen/global_spacing_xxxs"
+			tools:src="@mipmap/ic_launcher"/>
+
+	</FrameLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/today_wear_color_overlay_height"
+		android:orientation="vertical">
+
+
+		<TextView
+			android:id="@+id/temperature"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/global_spacing_xxxs"
+			android:fontFamily="sans-serif-thin"
+			android:textColor="@color/global_text_default"
+			android:textSize="@dimen/global_text_size_display_3"
+			tools:text="13°"/>
+
+		<TextView
+			android:id="@+id/condition"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:fontFamily="sans-serif-light"
+			android:textColor="@color/global_text_default"
+			android:textSize="@dimen/global_text_size_subhead"
+			tools:text="Clear sky lorem ipsum"/>
+
+		<TextView
+			android:id="@+id/location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:fontFamily="sans-serif-condensed"
+			android:textColor="@color/global_primary"
+			android:textSize="@dimen/global_text_size_caption"
+			tools:text="Clear sky lorem ipsum"/>
+	</LinearLayout>
+
+	<FrameLayout
+		android:id="@+id/loading"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/today_wear_background"
+		android:visibility="gone">
+
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"/>
+
+	</FrameLayout>
+
+
+</FrameLayout>
