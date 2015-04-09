@@ -21,6 +21,8 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 /**
+ * Utility class for obtaining and sending current weather to wearable device via EventBus
+ * <p>
  * Created by jakubkinst on 09/04/15.
  */
 public class WearWeatherManager {

@@ -18,6 +18,8 @@ import cz.kinst.jakub.weather.android.R;
 import cz.kinst.jakub.weather.android.entity.api.WeatherForecastItem;
 
 /**
+ * Adapter for displaying list of weather forecast for upcoming days
+ * <p>
  * Created by jakubkinst on 04/04/15.
  */
 public class ForecastAdapter extends ArrayAdapter<WeatherForecastItem> {

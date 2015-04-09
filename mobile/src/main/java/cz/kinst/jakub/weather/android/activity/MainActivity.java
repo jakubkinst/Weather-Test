@@ -17,7 +17,9 @@ import cz.kinst.jakub.weather.android.fragment.ForecastFragment;
 import cz.kinst.jakub.weather.android.fragment.NavigationDrawerFragment;
 import cz.kinst.jakub.weather.android.fragment.TodayFragment;
 
-
+/**
+ * Main Activity holding navigation drawer and main fragment holder
+ */
 public class MainActivity extends ActionBarActivity
 		implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 

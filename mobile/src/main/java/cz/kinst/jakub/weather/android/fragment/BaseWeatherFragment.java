@@ -14,6 +14,9 @@ import cz.kinst.jakub.weather.android.entity.api.WeatherResponse;
 import cz.kinst.jakub.weather.android.location.CurrentLocationProvider;
 
 /**
+ * Abstract base fragment with common methods for determining
+ * current position and downloading weather
+ * <p>
  * Created by jakubkinst on 05/04/15.
  */
 public abstract class BaseWeatherFragment extends Fragment {

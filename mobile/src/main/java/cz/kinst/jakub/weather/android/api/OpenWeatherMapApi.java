@@ -9,6 +9,8 @@ import retrofit.http.GET;
 import retrofit.http.Query;
 
 /**
+ * OpenWeatherMap.org API wrapper
+ * <p>
  * Created by jakubkinst on 04/04/15.
  */
 public class OpenWeatherMapApi {
@@ -24,6 +26,9 @@ public class OpenWeatherMapApi {
 	}
 
 
+	/**
+	 * OpenWeatherMap API interface in Retrofit language
+	 */
 	public interface ApiInterface {
 		@GET("/weather?units=metric")
 		void getCurrentWeather(@Query("lat") double lat, @Query("lon") double lon, Callback<CurrentWeatherResponse> callback);

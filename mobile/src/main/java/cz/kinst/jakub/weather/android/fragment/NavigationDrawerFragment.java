@@ -23,6 +23,9 @@ import butterknife.InjectView;
 import cz.kinst.jakub.weather.android.R;
 import cz.kinst.jakub.weather.android.adapter.NavigationAdapter;
 
+/**
+ * Navigation drawer fragment displaying a simple list
+ */
 public class NavigationDrawerFragment extends Fragment {
 
 	public static final int NAV_POSITION_TODAY = 0;

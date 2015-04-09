@@ -8,6 +8,9 @@ import android.view.MenuItem;
 
 import cz.kinst.jakub.weather.android.R;
 
+/**
+ * Settings activity
+ */
 public class SettingsActivity extends ActionBarActivity {
 
 	public static Intent getIntent(Context context) {

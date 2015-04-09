@@ -7,6 +7,8 @@ import android.os.Parcelable;
 import cz.kinst.jakub.weather.android.utility.BitmapUtility;
 
 /**
+ * A payload class used to transfer current weather to wearable device
+ * <p>
  * Created by jakubkinst on 09/04/15.
  */
 public class CurrentWeather implements Parcelable {

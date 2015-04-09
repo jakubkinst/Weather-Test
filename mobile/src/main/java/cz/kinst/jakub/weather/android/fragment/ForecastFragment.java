@@ -21,6 +21,9 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
+/**
+ * Weather forecast fragment
+ */
 public class ForecastFragment extends BaseWeatherFragment {
 
 

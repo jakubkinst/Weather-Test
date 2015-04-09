@@ -22,6 +22,9 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
+/**
+ * Today's weather fragment
+ */
 public class TodayFragment extends BaseWeatherFragment {
 
 	@InjectView(R.id.current_image)

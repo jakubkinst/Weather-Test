@@ -4,6 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
+ * Error Event transferred to wearable device
+ * <p>
  * Created by jakubkinst on 09/04/15.
  */
 public class ErrorEvent implements Parcelable {

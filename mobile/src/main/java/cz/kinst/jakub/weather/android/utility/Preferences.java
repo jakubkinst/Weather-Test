@@ -8,6 +8,7 @@ import cz.kinst.jakub.weather.android.R;
 
 
 /**
+ * Preferences (type-safe)
  * Created by jakubkinst on 05/04/15.
  */
 public class Preferences {

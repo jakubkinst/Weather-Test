@@ -5,6 +5,9 @@ import android.preference.PreferenceFragment;
 
 import cz.kinst.jakub.weather.android.R;
 
+/**
+ * Settings fragment
+ */
 public class SettingsFragment extends PreferenceFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {

@@ -10,6 +10,8 @@ import cz.kinst.jakub.weather.android.utility.WearWeatherManager;
 import pl.tajchert.buswear.EventBus;
 
 /**
+ * Application class
+ * <p>
  * Created by jakubkinst on 04/04/15.
  */
 public class WeatherApplication extends Application {

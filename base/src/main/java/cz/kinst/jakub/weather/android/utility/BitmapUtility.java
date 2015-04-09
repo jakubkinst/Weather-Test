@@ -7,6 +7,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
+ * Utility for converting Bitmap to a byte array and back
+ * <p>
  * Created by jakubkinst on 09/04/15.
  */
 public class BitmapUtility {

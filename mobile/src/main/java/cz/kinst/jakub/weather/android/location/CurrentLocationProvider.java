@@ -9,6 +9,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 
 /**
+ * Helper class for obtaining last user's location via Google Play services
+ * <p>
  * Created by jakubkinst on 04/04/15.
  */
 public class CurrentLocationProvider implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
