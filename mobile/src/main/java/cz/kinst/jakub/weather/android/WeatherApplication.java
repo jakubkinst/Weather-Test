@@ -37,7 +37,7 @@ public class WeatherApplication extends Application {
 		Logger.i("WEAR Message: " + message);
 
 		if (message.equals(getString(R.string.event_get_weather))) {
-			WearWeatherManager.sendCurrentWeatherToWear();
+			WearWeatherManager.sendCurrentWeatherToWear(this);
 		}
 	}
 
